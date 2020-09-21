@@ -1,35 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="2"
-    android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="130dp"
-        android:layout_height="57dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:text="@string/hello"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/tv_response"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/requesting"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="317dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_centerInParent="true"
+        android:background="#F1F0F0"
+        android:textColor="@color/colorAccent"
+        android:padding="20dp"
+        android:text="Server Response will appear here"/>
 
-</LinearLayout>
+
+    <Button
+        android:id="@+id/btn_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:gravity="center"
+        android:text="@string/requesting"   />
+
+</RelativeLayout>
